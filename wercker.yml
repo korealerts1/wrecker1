@@ -25,3 +25,6 @@ build:
         code: |
           echo "hello world!"
 
+   after-steps:
+      - mzp/http-notify:
+          url: https://qa1.kore.com/hooks/b8e4ea239f3f086689430e0ffcc7a54c
