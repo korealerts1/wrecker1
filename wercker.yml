@@ -16,6 +16,10 @@ box: debian
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
+    steps:
+        - script:
+            name: echo
+            code: echo "hello world!"
    after-steps:
       - mzp/http-notify:
           url: https://qa1.kore.com/hooks/9229f64de053e1e90f0c95c398c87769
